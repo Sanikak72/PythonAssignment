@@ -1,0 +1,95 @@
+# 1.Write a program to count the number of vowels, consonants, digits, and special characters in a given string.
+def count_characters(text):
+    vowels = "aeiouAEIOU"
+    vowel_count = 0
+    consonant_count = 0
+    digit_count = 0
+    special_count = 0
+
+    for char in text:
+        if char.isalpha():
+            if char in vowels:
+                vowel_count += 1
+            else:
+                consonant_count += 1
+        elif char.isdigit():
+            digit_count += 1
+        else:
+            special_count += 1
+
+    print("Vowels:", vowel_count)
+    print("Consonants:", consonant_count)
+    print("Digits:", digit_count)
+    print("Special Characters:", special_count)
+
+
+string = input("Enter a string: ")
+count_characters(string)
+
+#2. Given a string, reverse each word individually without changing the word order.
+def reverse_each_word(sentence):
+    words = sentence.split()
+    reversed_words = [word[::-1] for word in words]
+    return " ".join(reversed_words)
+
+
+
+string = input("Enter a string: ")
+result = reverse_each_word(string)
+print(result)
+
+
+#3.Check whether a given string is a palindrome using indexing and slicing.
+
+s = "madam"
+
+rev = s[::-1]
+
+is_palindrome = True
+for i in range(len(s)):
+    if s[i] != rev[i]:
+        is_palindrome = False
+        break
+
+if is_palindrome:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+
+
+#4.Write a program to find the frequency of each character in a string.
+
+s = "hello world"
+
+
+freq = {}
+
+
+for char in s:
+    if char in freq:
+
+        freq[char] += 1
+    else:
+
+        freq[char] = 1
+
+for char, count in freq.items():
+    print(f"'{char}': {count}")
+
+
+#5.Demonstrate string immutability by attempting to modify a character and handling the error.
+
+s = "hello"
+
+
+try:
+    s[0] = "H"
+except TypeError as e:
+    print(f"Error: {e}")
+
+s = "H" + s[1:]  
+
+print(f"Modified string: {s}")
+
