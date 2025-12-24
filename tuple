@@ -1,0 +1,57 @@
+#1.Write a program to find the maximum and minimum elements in a tuple.
+
+my_tuple = (10, 20, 4, 45, 99)
+
+max_element = my_tuple[0]
+min_element = my_tuple[0]
+
+for element in my_tuple:
+    if element > max_element:
+        max_element = element
+    if element < min_element:
+        min_element = element
+
+print("Maximum element:", max_element)
+print("Minimum element:", min_element)
+
+
+#2.Convert a list of tuples into a dictionary.
+
+
+list_of_tuples = [('a', 1), ('b', 2), ('c', 3)]
+
+
+dict_from_tuples = {key: value for key, value in list_of_tuples}
+
+print("Dictionary from list of tuples:", dict_from_tuples)
+
+#3.Count the occurrence of an element in a tuple without using built-in methods.
+
+my_tuple = (10, 20, 10, 30, 10, 40)
+element_to_count = 10
+count = 0
+for item in my_tuple:
+    if item == element_to_count:
+        count += 1
+
+print(f"Element {element_to_count} occurs {count} times in the tuple.")
+
+
+#4.Create a tuple with mutable elements and modify the mutable data inside it.
+
+my_tuple = ([1, 2, 3], "Hello", 5)
+
+my_tuple[0][0] = 99
+
+print("Modified tuple:", my_tuple)
+
+#5.Write a program to swap two tuples.
+
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+tuple1, tuple2 = tuple2, tuple1
+
+print("Swapped tuple1:", tuple1)
+print("Swapped tuple2:", tuple2)
+
