@@ -1,0 +1,58 @@
+#1.Write a program to find the union, intersection, difference, and symmetric difference of two sets.
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+union_set = set1 | set2
+
+intersection_set = set1 & set2
+
+difference_set = set1 - set2
+
+symmetric_difference_set = set1 ^ set2
+
+print("Union:", union_set)
+print("Intersection:", intersection_set)
+print("Difference (set1 - set2):", difference_set)
+print("Symmetric Difference:", symmetric_difference_set)
+
+#2.Remove common elements from two sets.
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+set3 =set1 - set2
+set2 -= set1
+
+print("Modified set1:", set3)
+print("Modified set2:", set2)
+
+#3.Write a program to check whether one set is a subset of another.
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+
+
+is_subset = set1.issubset(set2)
+
+print("Is set1 a subset of set2?", is_subset)
+
+#4.Iterate over a set and print only elements greater than a given number.
+
+my_set = {1, 5, 7, 9, 3, 12, 6}
+
+threshold = 5
+
+for elem in my_set:
+    if elem > threshold:
+        print(elem)
+
+#5.Given a list with duplicate values, convert it into a set and back to a list with unique elements.
+
+
+my_list = [1, 2, 2, 3, 4, 4, 5, 1]
+
+my_set = set(my_list)
+
+unique_list = list(my_set)
+
+print("Unique list:", unique_list)
